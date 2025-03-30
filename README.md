@@ -2,7 +2,15 @@
 
 A modern, responsive weather dashboard application built with React and TypeScript that provides real-time weather information and forecasts.
 
-![Weather Dashboard](https://panchamkumarr.github.io/weather_dashboard/screenshot.png)
+## 📸 Screenshots
+
+### Light Mode
+
+![Weather Dashboard Light Mode](https://panchamkumarr.github.io/weather_dashboard/screenshot-light.png)
+
+### Dark Mode
+
+![Weather Dashboard Dark Mode](https://panchamkumarr.github.io/weather_dashboard/screenshot-dark.png)
 
 ## 🌟 Features
 
