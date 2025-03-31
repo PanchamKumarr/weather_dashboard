@@ -1,6 +1,6 @@
 # Weather Dashboard
 
-A modern, responsive weather dashboard application built with React and TypeScript that provides real-time weather information and forecasts.
+A modern, responsive full-stack weather dashboard application built with React, TypeScript, and Node.js that provides real-time weather information and forecasts.
 
 ## 📸 Screenshots
 
@@ -14,6 +14,8 @@ A modern, responsive weather dashboard application built with React and TypeScri
 
 ## 🌟 Features
 
+- **Full-Stack Architecture**: Frontend deployed on GitHub Pages, Backend deployed on Render
+- **Secure API Handling**: Backend proxy for secure API key management
 - **Real-time Weather Data**: Get current weather conditions for any city worldwide
 - **5-Day Forecast**: View detailed weather forecasts for the next 5 days
 - **Search History**: Keep track of your recently searched cities
@@ -23,11 +25,29 @@ A modern, responsive weather dashboard application built with React and TypeScri
 
 ## 🛠️ Technologies Used
 
+### Frontend
+
 - **React 18.3.1** - Frontend framework
 - **TypeScript** - Type safety and better developer experience
 - **Tailwind CSS** - Styling and responsive design
 - **Vite** - Build tool and development server
+
+### Backend
+
+- **Node.js** - Server runtime
+- **Express** - Web framework
+- **TypeScript** - Type safety
+- **CORS** - Cross-Origin Resource Sharing
+- **dotenv** - Environment variable management
+
+### APIs and Services
+
 - **OpenWeather API** - Weather data provider
+- **GitHub Pages** - Frontend hosting
+- **Render** - Backend hosting
+
+### Development Tools
+
 - **Vitest** - Unit testing
 - **React Testing Library** - Component testing
 - **ESLint** - Code quality and consistency
@@ -35,7 +55,8 @@ A modern, responsive weather dashboard application built with React and TypeScri
 
 ## 🚀 Live Demo
 
-Check out the live application: [Weather Dashboard](https://panchamkumarr.github.io/weather_dashboard/)
+Frontend: [Weather Dashboard](https://panchamkumarr.github.io/weather_dashboard/)
+Backend API: [Weather API](https://weather-dashboard-zyhu.onrender.com/api)
 
 ## 💻 Getting Started
 
@@ -58,24 +79,52 @@ Check out the live application: [Weather Dashboard](https://panchamkumarr.github
    cd weather_dashboard
    ```
 
-3. Install dependencies:
+3. Install frontend dependencies:
 
    ```bash
    npm install
    ```
 
-4. Create a `.env` file in the root directory and add your OpenWeather API key:
+4. Install backend dependencies:
 
-   ```env
-   VITE_API_KEY=your_api_key_here
+   ```bash
+   cd backend
+   npm install
    ```
 
-5. Start the development server:
+5. Create environment files:
+
+   Frontend (.env):
+
+   ```env
+   VITE_API_URL=http://localhost:3000/api
+   ```
+
+   Backend (.env):
+
+   ```env
+   PORT=3000
+   WEATHER_API_KEY=your_api_key_here
+   ```
+
+6. Start the development servers:
+
+   Backend:
+
    ```bash
+   cd backend
    npm run dev
    ```
 
-The application will be available at `http://localhost:5173`
+   Frontend:
+
+   ```bash
+   cd ..
+   npm run dev
+   ```
+
+The frontend will be available at `http://localhost:5173`
+The backend will be available at `http://localhost:3000`
 
 ## 🧪 Running Tests
 
@@ -101,11 +150,21 @@ npm run preview
 
 ## 🚀 Deployment
 
-Deploy to GitHub Pages:
+### Frontend Deployment (GitHub Pages)
 
 ```bash
 npm run deploy
 ```
+
+### Backend Deployment (Render)
+
+The backend is automatically deployed to Render when changes are pushed to the main branch.
+
+Backend environment variables required on Render:
+
+- `NODE_ENV`: production
+- `PORT`: 3000
+- `WEATHER_API_KEY`: Your OpenWeather API key
 
 ## 📱 Features in Detail
 
