@@ -17,9 +17,9 @@ export function WeatherCard({ weather, isDark }: WeatherCardProps) {
           isDark ? 'text-white' : 'text-gray-800'
         }`}>{weather.name}</h2>
         <img
-          src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+          src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`}
           alt={weather.weather[0].description}
-          className="w-16 h-16"
+          className="w-24 h-24"
         />
       </div>
       

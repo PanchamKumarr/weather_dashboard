@@ -19,18 +19,18 @@ export function ForecastCard({ forecast, isDark }: ForecastCardProps) {
       <h3 className={`text-xl font-semibold mb-4 ${
         isDark ? 'text-white' : 'text-gray-800'
       }`}>5-Day Forecast</h3>
-      <div className="grid grid-cols-5 gap-2">
+      <div className="grid grid-cols-5 gap-4">
         {dailyForecasts.map((day) => (
           <div key={day.dt_txt} className="text-center">
-            <div className={`text-sm mb-1 ${
+            <div className={`text-sm font-medium mb-2 ${
               isDark ? 'text-gray-400' : 'text-gray-500'
             }`}>
               {new Date(day.dt_txt).toLocaleDateString('en-US', { weekday: 'short' })}
             </div>
             <img
-              src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
+              src={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}
               alt={day.weather[0].main}
-              className="w-8 h-8 mx-auto"
+              className="w-12 h-12 mx-auto mb-2"
             />
             <div className={`text-sm font-semibold ${
               isDark ? 'text-white' : 'text-gray-900'
